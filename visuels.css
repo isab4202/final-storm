@@ -346,8 +346,6 @@ section {
 }
 
 #knap_textbox p {
-
-
     font-size: 17px;
     font-family: 'Nunito', sans-serif;
 
@@ -520,8 +518,6 @@ span {
     background-position: 0% -300%;
     animation: puls_kf 0.5s infinite alternate linear;
 }
-
-#endsite_sprite {}
 
 @keyframes puls_kf {
     0% {
