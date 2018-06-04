@@ -1,0 +1,534 @@
+/*-------Generalt--------*/
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+section {}
+
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+/*-------Forside--------*/
+
+#forside {
+    position: relative;
+    width: 100vw;
+    height: 56vw;
+    display: block;
+}
+
+#forside_pic {
+
+    background-image: url(billed-filer/bg.png);
+    position: absolute;
+    width: 100vw;
+    height: 56vw;
+    background-size: cover;
+}
+
+#storm_top {
+
+    background-image: url(svg-filer/stormblinker-01.svg);
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    height: 20vw;
+    width: 20vw;
+    background-size: 200%;
+    animation: stormblinker_kf 2s infinite both steps(2);
+    animation-duration: 2s;
+
+}
+
+@keyframes stormblinker_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+    70% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: -200% 0%;
+    }
+}
+
+#knap_bottom {
+    background-image: url(svg-filer/start_spil_knap.svg);
+    position: absolute;
+    bottom: 10%;
+    left: 38%;
+    height: 8.89vw;
+    width: 25vw;
+    background-size: 100%;
+
+}
+
+section {
+    display: none;
+}
+
+/*-------Storms værelse--------*/
+
+#storms_vaerlse {
+    position: relative;
+    width: 100vw;
+    height: 56vw;
+    /*skjuler det der "flyder" ud over baggrunden*/
+    overflow: hidden;
+}
+
+#storms_vaerlse_pic {
+    background-image: url(billed-filer/storms_room.png);
+    position: absolute;
+    width: 100vw;
+    height: 56vw;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+/*generelle indstillinger på CONTAINEREN der holder på storms spritesheet*/
+
+#storm_container {
+    position: absolute;
+    /*hvor Storm er placeret på scenen */
+    top: 50%;
+    left: 40%;
+    /*højde og vide på containeren der displayer Storm */
+    height: 30vw;
+    width: 30vw;
+    /*gør at vores figur er scalerbar */
+    transform: scale(2);
+
+
+}
+
+/*generelle indstillinger på SPRITESHEETET til storms animationer */
+
+#storm_sprite_1 {
+    background-image: url(svg-filer/storm_sprite-01.svg);
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+
+    /* background-sizen sættes til 800% fordi hele spriten er en 8 takts spite(8 figuer bred)*/
+    background-size: 500% 400%;
+
+}
+
+/*animationen af sprite1: storms første bevægelse når spillet starter, han blinker*/
+
+.sprite1 {
+    /*animation sættes til tidsinterval 2 sek og er en 2 steps amination, altså den køre mellem to billeder    */
+    animation: storm_sprite_1_kf 2s infinite both steps(2);
+}
+
+
+/*visning af de enkelte keyframes til sprite1*/
+
+@keyframes storm_sprite_1_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+
+
+    100% {
+        background-position: -200% 0%;
+    }
+}
+
+/*animationen af sprite2: storms anden bevægelse i spillet, storm tager sin telefon frem*/
+
+.sprite2 {
+    background-position: 0% -100%;
+    /*animation sættes til tidsinterval 2 sek og er en 4 steps amination, men den køre mellem 5 frames, første frame tælles ikke med da den ikke køre i loop */
+    animation: storm_sprite_2_kf 2s 1 both steps(4);
+
+}
+
+/*positionering af de enkelte keyframes til sprite2*/
+
+@keyframes storm_sprite_2_kf {
+    0% {
+        background-position: 0% -100%;
+    }
+
+
+    100% {
+        background-position: -400% -100%;
+    }
+}
+
+
+/*animationen af sprite2: storms anden bevægelse i spillet, storm tager sin telefon frem*/
+
+.sprite3 {
+    background-position: 0% -100%;
+    /*animation sættes til tidsinterval x sek og er en 1 steps amination, men den køre mellem 2 frames, første frame tælles ikke med da den ikke køre i loop */
+    animation: storm_sprite_3_kf 2s 1 both steps(1);
+
+}
+
+/*positionering af de enkelte keyframes til sprite2*/
+
+@keyframes storm_sprite_3_kf {
+    0% {
+        background-position: 0% -200%;
+    }
+
+    100% {
+        background-position: -100% -200%;
+    }
+
+}
+
+/*generalle indstillinger for teksbeskeder*/
+
+#mobil {
+    z-index: 3;
+    width: 30vw;
+    height: 55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/*her bliver beskederne lagt i en klumme (column) og når en ny besked kommer popper den nye besked op og gør plads til den */
+
+#mobil p {
+    font-family: 'Nunito', sans-serif;
+}
+
+.text {
+    background-size: cover;
+}
+
+#text_1 {
+    background-image: url(billed-filer/jonas.png);
+    z-index: 3;
+    width: 30vw;
+    height: 18vw;
+    background-size: cover;
+    display: none;
+}
+
+#text_1 p {
+    margin-top: 3vw;
+    margin-left: 6vw;
+    font-size: 1.1vw;
+
+}
+
+
+#text_2 {
+    background-image: url(billed-filer/simon.png);
+    z-index: 3;
+    width: 30vw;
+    height: 12vw;
+    background-size: cover;
+    display: none;
+}
+
+#text_2 p {
+    margin-top: 7.5vw;
+    margin-left: 7vw;
+    font-size: 1.6vw;
+
+
+
+}
+
+
+.sprite4 {
+
+    /*animation sættes til tidsinterval 2 sek og er en 4 steps amination, men den køre mellem 4 frames, første fraim tælles ikke med da den ikke køre i loop */
+    animation: storm_sprite_4_kf 2s 1 both steps(3);
+
+}
+
+/*positionering af de enkelte keyframes til sprite4*/
+
+@keyframes storm_sprite_4_kf {
+    0% {
+        background-position: 0% -300%;
+    }
+
+
+    100% {
+        background-position: -300% -300%;
+    }
+
+}
+
+#text_3 {
+    background-image: url(billed-filer/victor.png);
+    z-index: 1;
+    width: 30vw;
+    height: 12vw;
+    background-size: cover;
+    display: none;
+
+}
+
+#text_3 p {
+    margin-top: 7.4vw;
+    margin-left: 8vw;
+    font-size: 1.6vw;
+}
+
+#svar {
+    background-image: url(billed-filer/storm.png);
+    z-index: 1;
+    width: 30vw;
+    height: 12vw;
+    background-size: cover;
+    display: none;
+}
+
+/*på alle tekst bokse Har jeg placeret dem ved hjælp af width og height og også brugt den på p taggene*/
+
+.display {
+    display: block;
+}
+
+
+#knap_container {
+    /*    display: none;*/
+}
+
+#knap_1 {
+    background-image: url(svg-filer/valg_a.svg);
+    position: absolute;
+    height: 10.67vw;
+    width: 30vw;
+    top: 50%;
+    left: 15%;
+    background-size: 100%;
+    z-index: 5;
+    display: none;
+
+}
+
+#knap_2 {
+    background-image: url(svg-filer/valg_b.svg);
+    position: absolute;
+    height: 10.67vw;
+    width: 30vw;
+    top: 5%;
+    left: 150%;
+    background-size: 100%;
+    z-index: 5;
+    display: none;
+
+}
+
+#knap_textbox {
+    background-image: url(svg-filer/box.svg);
+    position: absolute;
+    background-size: 100%;
+    width: 30vw;
+    height: 13.5vw;
+    top: 15%;
+    left: 36%;
+    display: none;
+
+
+}
+
+#knap_textbox p {
+
+
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+/* Politimand Pop-up*/
+
+#politimand_full_container {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 50vw;
+    height: 22.5vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#politimand_container {
+    position: absolute;
+}
+
+#politimand_textbox {
+    background-image: url(svg-filer/box.svg);
+    background-size: 100%;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 50vw;
+    height: 22.5vw;
+}
+
+#politimand_textbox p {
+    position: absolute;
+    z-index: 3;
+    font-size: 15px;
+    left: 15vw;
+    top: 2vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#politimand_sprite {
+
+    background-image: url(svg-filer/politimand-01.svg);
+    position: absolute;
+    top: 0vw;
+    left: -4vw;
+    width: 20vw;
+    height: 20vw;
+    background-size: 200%;
+    z-index: 2;
+    animation-direction: reverse;
+    animation-name: poltimand_blink_kf;
+    animation-duration: 1s;
+    animation-timing-function: steps(2);
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes poltimand_blink_kf {
+
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: -200% 0%;
+    }
+}
+
+
+/* Thumbs-UP popup*/
+
+#thumbsup_full_container {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+#thumbsup_container {
+    top: 80vw;
+    left: 10vw;
+    transform: scale(1.5);
+    height: 7.5vw;
+    width: 10vw;
+}
+
+#thumbsup_sprite {
+    background-image: url(svg-filer/thumb-01.svg);
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    background-size: 400%;
+    animation: thumbsup_sprite_kf 2s infinite steps(4);
+    animation-direction: reverse;
+    top: 2%;
+    left: 75%;
+
+}
+
+@keyframes thumbsup_sprite_kf {
+
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 400% 0%;
+    }
+
+}
+
+#thumbsup_textbox {
+    background-image: url(svg-filer/box.svg);
+    position: relative;
+    left: 0%;
+    top: 0%;
+    width: 50vw;
+    height: 22.5vw;
+    background-size: 100%;
+}
+
+#thumbsup_textbox p {
+    position: absolute;
+    font-size: 18px;
+    left: 1vw;
+    top: 0.5vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*-------End site--------*/
+
+#endsite {
+    display: none;
+    background-image: url(svg-filer/end_site1.ai-01.svg);
+    position: absolute;
+    width: 100vw;
+    height: 56vw;
+    background-size: cover;
+}
+
+#textbox_endbesked p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2.9vw;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-shadow: 1px 1px #1B1F28;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-top: 12vw;
+}
+
+
+
+#textbox_endlink {
+    background-image: url(svg-filer/privat_snak-01.svg);
+    position: absolute;
+    height: 20vw;
+    width: 25vw;
+    bottom: 13vw;
+    left: 27vw;
+    background-size: 400%;
+    background-position: 0% -300%;
+    animation: puls_kf 0.5s infinite alternate linear;
+}
+
+#endsite_sprite {}
+
+@keyframes puls_kf {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1.8);
+    }
+
+}

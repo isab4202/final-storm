@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visuels.css">
+    <title>storms valg</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+</head>
+
+<body>
+
+    <section id="forside" class="visScene">
+        <div id="forside_pic"></div>
+        <div id="storm_top">
+
+        </div>
+
+        <div id="knap_bottom">
+
+        </div>
+
+    </section>
+
+    <section id="storms_vaerlse">
+        <div id="storms_vaerlse_pic"></div>
+
+
+        <div id="storm_container">
+            <!-- spriten har fået en statisk class for at definere hvilken sted animationen starter-->
+            <div id="storm_sprite_1" class="sprite1">
+
+            </div>
+
+        </div>
+
+        <!-- /*kode for beskeder*/-->
+
+        <div id="mobil">
+            <div class="text" id="text_1">
+                <p>
+                    Hei bois!!
+                    <br> Tjek lige det her billede ud af Emma Isabella
+                </p>
+            </div>
+
+            <div class="text" id="text_2">
+                <p>
+                    Shit!!! Hun er fræk mand!
+                </p>
+            </div>
+
+            <div class="text" id="text_3">
+                <p>
+                    Åhh hva mand patter?!!
+                </p>
+            </div>
+
+            <div id="svar">
+
+            </div>
+        </div>
+
+        <!-- /*her skal lige skrives lidt om hvad der sker*/-->
+        <div id="knap_container">
+            <div id="knap_textbox">
+                <p>
+                    <br> Hvad skal Storm svare?
+                </p>
+            </div>
+            <div id="knap_1">
+                <div id="knap_2">
+                </div>
+            </div>
+        </div>
+        <div id="politimand_full_container">
+            <div id="politimand_textbox">
+                <p><span>Åh nej! Du valgte det forkerte svar..</span>
+                    <br><br> Det er ikke bare dårlig stil, men det er også ulovligt at dele eller videresende billeder af andre uden at havde deres tilladelse.<br><br> Brug din kritiske sans og tænk dig om en ekstra gang. Tænk hvis det var dig selv…</p>
+            </div>
+
+            <div id="politimand_sprite">
+            </div>
+        </div>
+
+        <div id="thumbsup_full_container">
+            <div id="thumbsup_textbox">
+                <p>
+                    Godt valg!<br><br> Selvom det ikke altid er lige sjovt at være den eneste med en anden holdning, er det sejt at kunne sige fra. Det er nemlig ulovligt at dele billeder af andre på nettet uden deres tilladelse.
+                </p>
+            </div>
+            <div id=" thumbsup_container">
+                <div id="thumbsup_sprite">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="endsite">
+        <div id="endsite_container">
+            <div id="endsite_sprite">
+                <div id="textbox_endbesked">
+                    <p>Vidste du at Privatsnak.dk giver rådgivning til unge i alderen 10 – 15 år?
+
+                        <br> Spørg anonymt om billeddeling, kærester, følelser, pubertet eller sex på</p>
+                </div>
+
+                <div id="textbox_endlink">
+                    <a href="http://privatsnak.dk/"> </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <audio id="thumbsup_lyd" src="lyd-filer/klap.mp3"></audio>
+    <audio id="polit_lyd" src="lyd-filer/politi_lyd.mp3"></audio>
+    <audio id="besked_lyd_1" src="lyd-filer/besked_lyd.mp3"></audio>
+    <audio id="storm_beat" src="lyd-filer/storm_beat.mp3"></audio>
+    <audio id="intro_beat" src="lyd-filer/intro.mp3"></audio>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="animation.js"></script>
+</body>
+
+</html>
