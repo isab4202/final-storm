@@ -346,9 +346,9 @@ section {
 }
 
 #knap_textbox p {
-    <<<<<<< HEAD font-size: 2.5vw;
-    =======font-size: 17px;
-    > > > > > > > origin/master font-family: 'Nunito', sans-serif;
+    font-size: 2.5vw;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
 
 }
 
@@ -449,9 +449,7 @@ span {
     background-size: 400%;
     animation: thumbsup_sprite_kf 2s infinite steps(4);
     animation-direction: reverse;
-    <<<<<<< HEAD=======top: 2%;
-    left: 75%;
-    > > > > > > > origin/master
+
 }
 
 @keyframes thumbsup_sprite_kf {
