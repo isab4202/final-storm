@@ -336,19 +336,19 @@ section {
     background-image: url(svg-filer/box.svg);
     position: absolute;
     background-size: 100%;
-    width: 27vw;
-    height: 12.149999999999999vw;
-    top: 10vw;
-    left: 36vw;
+    width: 30vw;
+    height: 13.5vw;
+    top: 15%;
+    left: 36%;
     display: none;
 
 
 }
 
 #knap_textbox p {
-    font-size: 2.5vw;
-    font-family: 'Nunito', sans-serif;
-    text-align: center;
+    <<<<<<< HEAD font-size: 2.5vw;
+    =======font-size: 17px;
+    > > > > > > > origin/master font-family: 'Nunito', sans-serif;
 
 }
 
@@ -373,8 +373,8 @@ section {
     background-image: url(svg-filer/box.svg);
     background-size: 100%;
     position: relative;
-    top: 0vw;
-    left: 0vw;
+    top: 0%;
+    left: 0%;
     width: 50vw;
     height: 22.5vw;
 }
@@ -398,7 +398,7 @@ span {
     background-image: url(svg-filer/politimand-01.svg);
     position: absolute;
     top: 0vw;
-    left: -3vw;
+    left: -4vw;
     width: 20vw;
     height: 20vw;
     background-size: 200%;
@@ -428,11 +428,12 @@ span {
 #thumbsup_full_container {
     display: none;
     position: absolute;
-    top: 20vw;
-    left: 30vw;
+    top: 40%;
+    left: 30%;
 }
 
 #thumbsup_container {
+
     position: absolute;
     top: 13vw;
     left: 40vw;
@@ -448,7 +449,9 @@ span {
     background-size: 400%;
     animation: thumbsup_sprite_kf 2s infinite steps(4);
     animation-direction: reverse;
-
+    <<<<<<< HEAD=======top: 2%;
+    left: 75%;
+    > > > > > > > origin/master
 }
 
 @keyframes thumbsup_sprite_kf {
@@ -465,8 +468,8 @@ span {
 #thumbsup_textbox {
     background-image: url(svg-filer/box.svg);
     position: relative;
-    left: 0vw;
-    top: 0vw;
+    left: 0%;
+    top: 0%;
     width: 50vw;
     height: 22.5vw;
     background-size: 100%;
@@ -516,8 +519,6 @@ span {
     background-size: 100%;
     animation: puls_kf 0.5s infinite alternate linear;
 }
-
-#endsite_sprite {}
 
 @keyframes puls_kf {
     0% {
