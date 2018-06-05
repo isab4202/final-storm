@@ -16,8 +16,9 @@ function showScene2() {
     $("#intro_beat")[0].pause();
     $("#storm_beat")[0].play();
     $("#storm_beat")[0].volume = 0.5;
+    beskederKommerFrem();
 
-    setTimeout(takeOutPhone, 4000);
+    setTimeout(takeOutPhone, 5500);
 }
 
 
@@ -48,10 +49,12 @@ function surprised() {
 
 /* kode for Storms beskeder*/
 /*sekunderne før næste besked skal starte*/
-setTimeout(storm_besked1, 8000);
-setTimeout(storm_svar, 7500);
-setTimeout(storm_besked2, 10000);
-setTimeout(storm_besked3, 12000);
+function beskederKommerFrem() {
+    setTimeout(storm_besked1, 8000);
+    setTimeout(storm_svar, 7500);
+    setTimeout(storm_besked2, 10000);
+    setTimeout(storm_besked3, 12000);
+}
 
 
 /*viser svar stedet*/

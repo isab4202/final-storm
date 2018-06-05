@@ -346,7 +346,7 @@ section {
 }
 
 #knap_textbox p {
-    font-size: 25px;
+    font-size: 2.5vw;
     font-family: 'Nunito', sans-serif;
     text-align: center;
 
@@ -382,7 +382,7 @@ section {
 #politimand_textbox p {
     position: absolute;
     z-index: 3;
-    font-size: 15px;
+    font-size: 1.5vw;
     left: 15vw;
     top: 2vw;
     font-family: 'Roboto', sans-serif;
@@ -390,7 +390,7 @@ section {
 
 span {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.6vw;
 }
 
 #politimand_sprite {
@@ -433,23 +433,21 @@ span {
 }
 
 #thumbsup_container {
-    top: 30vw;
-    left: 10vw;
-    transform: scale(1.5);
+    position: absolute;
+    top: 13vw;
+    left: 40vw;
+    transform: scale(1);
     height: 7.5vw;
     width: 10vw;
 }
 
 #thumbsup_sprite {
     background-image: url(svg-filer/thumb-01.svg);
-    position: absolute;
     height: 10vw;
     width: 10vw;
     background-size: 400%;
     animation: thumbsup_sprite_kf 2s infinite steps(4);
     animation-direction: reverse;
-    top: 12vw;
-    left: 40vw;
 
 }
 
@@ -476,7 +474,7 @@ span {
 
 #thumbsup_textbox p {
     position: absolute;
-    font-size: 18px;
+    font-size: 1.8vw;
     left: 1vw;
     top: 0.5vw;
     font-family: 'Roboto', sans-serif;
@@ -503,20 +501,19 @@ span {
     text-shadow: 1px 1px #1B1F28;
     margin-left: 9vw;
     margin-right: 9vw;
-    margin-top: 12vw;
+    margin-top: 5vw;
 }
 
 
 
 #textbox_endlink {
-    background-image: url(svg-filer/privat_snak-01.svg);
+    background-image: url(svg-filer/privat_snak_logo.svg);
     position: absolute;
-    height: 20vw;
-    width: 25vw;
-    bottom: 13vw;
-    left: 27vw;
-    background-size: 400%;
-    background-position: 0% -300%;
+    height: 12vw;
+    width: 12vw;
+    bottom: 3vw;
+    left: 44vw;
+    background-size: 100%;
     animation: puls_kf 0.5s infinite alternate linear;
 }
 
